@@ -1,0 +1,18 @@
+edc-navigation,
+egs-navigation,
+eos-navigation,
+epicgames-navigation,
+fortnite-navigation,
+rocketleague-navigation,
+twinmotion-navigation,
+fallguys-navigation,
+realitycapture-navigation,
+metahuman-navigation,
+devportal-navigation,
+unrealengine-navigation,
+sac-navigation,
+kws-navigation {
+	display: flex;
+	height: 4.5rem;
+	font-family: Inter, sans-serif;
+}
