@@ -1,0 +1,7 @@
+:host { align-items: flex-start; box-sizing: border-box; display: flex; flex-direction: column; }
+@media (min-width: 1024px) {
+  :host { box-shadow: rgba(0, 0, 0, 0.1) 0px 32px 16px, rgba(0, 0, 0, 0.1) 0px 16px 8px, rgba(0, 0, 0, 0.1) 0px 8px 4px, rgba(0, 0, 0, 0.1) 0px 4px 2px, rgba(0, 0, 0, 0.1) 0px 2px 1px; background: var(--color-background-transparent-menu, rgba(48, 48, 52, .7)); backdrop-filter: var(--effect-material-blur, blur(50px)); border-radius: var(--size-border-radius-16, 16px); border: var(--size-border-width-1, 1px) solid var(--color-border-subdued, rgba(255, 255, 255, .1)); align-items: stretch; min-width: 10rem; padding-block: 0.5rem; padding-inline: 0.5rem; max-height: 720px; overscroll-behavior: contain; overflow: hidden auto; }
+  :host::-webkit-scrollbar { width: 16px; }
+  :host::-webkit-scrollbar-track { margin-block: 8px; }
+  :host::-webkit-scrollbar-thumb { background: transparent; box-shadow: 0 0 0 6px var(--color-palette-transparent-light-015, rgba(255, 255, 255, .15)) inset; border: 4px solid transparent; border-radius: 100px; }
+}

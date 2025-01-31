@@ -1,0 +1,36 @@
+.visually-hidden { border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-block: -1px; margin-inline: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; }
+:host { display: block; position: relative; width: 100%; }
+.main-link { appearance: none; background-color: transparent; border: 0px; font-family: inherit; font-size: inherit; padding: 0px; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; --link-block-padding-fallback: .625rem; --link-inline-padding-fallback: 1rem; align-items: center; border-radius: 0.5rem; box-sizing: border-box; color: var(--color-text-primary, #ffffff); display: flex; column-gap: 0.25rem; justify-content: space-between; margin-block: 0px; margin-inline: 0px; line-height: 1.25rem; min-height: 1.25rem; padding-block: var(--link-block-padding, var(--link-block-padding-fallback)); padding-inline: var(--link-inline-padding, var(--link-inline-padding-fallback)); position: relative; text-decoration: none; user-select: none; z-index: 3; outline-offset: var(--link-outline-offset, -.5rem); transition: color var(--easing-duration, .12s) var(--easing, cubic-bezier(.65, 0, .35, 1)); }
+.main-link > * { pointer-events: none; }
+.main-link:not([disabled]) { cursor: pointer; }
+.main-link:focus-visible { outline: rgb(255, 255, 255) solid 0.125rem; }
+@media (max-width: 1023.9px) {
+  .main-link { --link-block-padding-fallback: .75rem; }
+}
+.main-link .label { font-family: Inter, sans-serif; font-style: normal; font-weight: 400; line-height: 150%; font-size: 0.875rem; letter-spacing: 0.02em; flex-grow: 1; }
+@media (max-width: 1023.9px) {
+  .main-link .label { font-family: Inter, sans-serif; font-style: normal; font-weight: 400; line-height: 150%; font-size: 1rem; }
+}
+.main-link:hover, .main-link.active { background-color: var(--color-background-transparent-elevated-high-hover, rgba(255, 255, 255, .15)); color: var(--color-text-primary, #ffffff); }
+@media (min-width: 1024px) {
+  .main-link.parent:hover, .main-link.parent.active { color: var(--color-text-secondary, rgba(255, 255, 255, .65)); }
+}
+@media (max-width: 1023.9px) {
+  .main-link { background-color: transparent; border-radius: 0.75rem; margin: 0px; padding-block: 0.75rem; padding-inline: 0.5rem; text-align: start; width: 100%; }
+}
+@media (min-width: 1024px) {
+  .main-link:hover, .main-link.active { background-color: transparent; }
+}
+.main-link .label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.main-link .icon-wrapper { display: flex; }
+.main-link svg { transition: transform var(--easing-duration, .12s) var(--easing, cubic-bezier(.65, 0, .35, 1)),color var(--easing-duration, .12s) var(--easing, cubic-bezier(.65, 0, .35, 1)); fill: var(--color-text-primary, #ffffff); flex-shrink: 0; height: 0.75rem; width: 0.75rem; }
+@media (max-width: 1023.9px) {
+  .main-link svg { fill: var(--color-text-secondary, rgba(255, 255, 255, .65)); }
+}
+@media (max-width: 1023.9px) {
+  .main-link .chevron svg { height: 1.25rem; width: 1.25rem; transform: rotate(-90deg); }
+}
+@media (max-width: 1023.9px) {
+  .main-link .chevron.rtl svg { transform: rotate(90deg); }
+}
+.main-link.active .chevron svg { transform: rotate(180deg); fill: var(--color-text-secondary, rgba(255, 255, 255, .65)); }

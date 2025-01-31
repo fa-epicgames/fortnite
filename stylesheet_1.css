@@ -1,0 +1,22 @@
+.visually-hidden { border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-block: -1px; margin-inline: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; }
+:host { color: var(--color-text-primary, white); max-width: 100%; }
+:host .menu-item { appearance: none; background-color: transparent; border: 0px; font-family: inherit; font-size: inherit; padding: 0px; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; --link-block-padding-fallback: .625rem; --link-inline-padding-fallback: 1rem; border-radius: 0.5rem; box-sizing: border-box; color: var(--color-text-primary, #ffffff); justify-content: space-between; margin-block: 0px; margin-inline: 0px; line-height: 1.25rem; min-height: 1.25rem; padding-block: var(--link-block-padding, var(--link-block-padding-fallback)); padding-inline: var(--link-inline-padding, var(--link-inline-padding-fallback)); position: relative; text-decoration: none; user-select: none; z-index: 3; outline-offset: var(--link-outline-offset, -.5rem); transition: color var(--easing-duration, .12s) var(--easing, cubic-bezier(.65, 0, .35, 1)); width: 100%; display: flex; align-items: center; gap: 1rem; }
+:host .menu-item > * { pointer-events: none; }
+:host .menu-item:not([disabled]) { cursor: pointer; }
+:host .menu-item:focus-visible { outline: rgb(255, 255, 255) solid 0.125rem; }
+@media (max-width: 1023.9px) {
+  :host .menu-item { --link-block-padding-fallback: .75rem; }
+}
+:host .menu-item .label { font-family: Inter, sans-serif; font-style: normal; font-weight: 400; line-height: 150%; font-size: 0.875rem; letter-spacing: 0.02em; flex-grow: 1; }
+@media (max-width: 1023.9px) {
+  :host .menu-item .label { font-family: Inter, sans-serif; font-style: normal; font-weight: 400; line-height: 150%; font-size: 1rem; }
+}
+:host .menu-item:hover, :host .menu-item.active { background-color: var(--color-background-transparent-elevated-high-hover, rgba(255, 255, 255, .15)); color: var(--color-text-primary, #ffffff); }
+@media (min-width: 1024px) {
+  :host .menu-item.parent:hover, :host .menu-item.parent.active { color: var(--color-text-secondary, rgba(255, 255, 255, .65)); }
+}
+:host .menu-item__content { display: flex; align-items: center; gap: 0.5rem; max-width: 100%; flex-grow: 1; }
+:host .menu-item.center :host .menu-item__content, :host .menu-item.center .label { width: 100%; justify-content: center; }
+:host .menu-item.icon-space .label { margin-inline-start: 1.75rem; }
+:host .menu-item .label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: start; }
+:host .menu-item epic-wf-eds-icon { flex-shrink: 0; width: 1.25rem; }
